@@ -10,7 +10,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "heroku-postbuild": "npm start"
+    "heroku-postbuild": "ng build"
   },
   "private": true,
   "dependencies": {
