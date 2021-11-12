@@ -1,30 +1,43 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from './views/home/home.component';
-
-
+import { HomeComponent } from './views/home/home.component';
+import { CadastroImovelComponent } from './components/product/cadastro-imovel/cadastro-imovel.component';
+import { CadastroLocatarioComponent } from './components/product/cadastro-locatario/cadastro-locatario.component';
 import { CepReadComponent } from './components/product/cep-read/cep-read.component';
-import { CepReadLogradouroComponent } from './components/product/cep-read-logradouro/cep-read-logradouro.component';
+import { ImovelReadLogradouroComponent } from './components/product/cep-read-logradouro/cep-read-logradouro.component';
+import { VisualizarImoveisComponent } from './components/product/visualizar-imoveis/visualizar-imoveis.component';
+import { HouseSearchComponent } from './components/product/house-search/house-search.component';
 
 const routes: Routes = [
-  {
+{
   path:"",
-  component:HomeComponent
-  },
-  {
-  path: "cep/read",
-  component : CepReadComponent
-  },
-  {
+  component : HomeComponent
+},
+{
+  path: "menu/procura/:campo",
+  component : HouseSearchComponent
+},
+{
+  path: "menu/cadastro",
+  component : CadastroLocatarioComponent
+},
+{
+  path: "menu/hospedar",
+  component : CadastroImovelComponent
+},
+{
   path: "cep/read/:cep",
   component : CepReadComponent
 },
 {
   path: "cep/read/logradouro/:cep",
-  component : CepReadLogradouroComponent
+  component : ImovelReadLogradouroComponent
 },
-
+{
+  path: "menu/imoveis",
+  component : VisualizarImoveisComponent
+},
 
 ];
 

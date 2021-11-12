@@ -1,19 +1,39 @@
 <mat-toolbar class="header mat-elevation-z5" >  
-    <span>
-        <a routerLink="/"> 
-            <img class="logo" src="assets/logo.png" alt="logo">   
-        </a>
-
-    </span>
     <span class="tittle-group"> 
         <a routerLink="/">
             <i class="material-icons icons">
-                  mail
+                  public
             </i>
-           Via Cep
+           air bnb
         </a>
-
+        <mat-divider></mat-divider>
      </span>    
+
+     <span class="cadastro">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+         <a mat-list-item>
+        <i class="material-icons">
+                  subject 
+                  person
+        </i>
+         </a>
+    </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item  routerLink="/menu/cadastro">
+                <mat-icon>account_box</mat-icon>
+                <span><strong>Cadastrar-se</strong></span>
+              </button>
+              <mat-divider></mat-divider>
+            <button mat-menu-item  routerLink="/menu/entrar">
+              <mat-icon>account_circle</mat-icon>
+              <span>Entrar</span>
+            </button>
+            <button mat-menu-item  routerLink="/menu/hospedar">
+              <mat-icon>account_balance</mat-icon>
+              <span>Hospedar</span>
+            </button>
+          </mat-menu>
+    </span>
 </mat-toolbar>
 
 

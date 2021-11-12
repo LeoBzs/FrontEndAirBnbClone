@@ -1,33 +1,14 @@
+<div>
 <mat-card class="home mat-elevation-z3">
-    <mat-card-title class="title"> 
-        Bem vindo! 
- </mat-card-title>
     <mat-card-subtitle class="subtitle">
 
-        <h2>Digite o Cep que gostaria de pesquisar</h2>
-        
-        <p><input type="text" id="cep" name="cep" #cep></p>
-        
-        <button type="button" (click)="getCep(cep.value)">Consultar</button>
-        
-
-    </mat-card-subtitle>
-
+        <mat-form-field appearance="fill" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+            <mat-label for="campo"> Para onde você vai?</mat-label>         
+            <input matInput type="text" id="campo" name="campo" #campo>        
+        </mat-form-field>
+        <button mat-button color="primary" class="button"  style="position: absolute; right: 0;" type="button" (click)="getResult(campo.value)"> <strong>   Conferir</strong></button>
+        </mat-card-subtitle>
 </mat-card>
+</div>
+<div [ngStyle]="{backgroundImage:'url(https://nitrocdn.com/FqkxkfJIGjXcOUZLthMxstedITnNiPsZ/assets/static/optimized/rev-3258028/wp-content/uploads/2021/05/airbn-welcoming-to-hosting.jpeg)'}"></div>
 
-<mat-card class="home mat-elevation-z3 ">
-    <mat-card-title class="title"> 
-       Busca por Rua
- </mat-card-title>
-    <mat-card-subtitle class="subtitle">
-
-        <h2>Digite a Rua que gostaria de pesquisar em "Porto Alegre"</h2>
-        
-        <p><input type="text" id="log" name="log" #log></p>        
-        
-        <button type="button" (click)="getRua(log.value)">Consultar</button>
-        
-
-    </mat-card-subtitle>
-
-</mat-card>

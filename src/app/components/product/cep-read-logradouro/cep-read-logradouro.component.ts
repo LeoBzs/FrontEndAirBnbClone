@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Cep } from '../cep.model';
-import { ProductService } from '../product.service';
+import { imoveisArray, Imovel } from 'src/app/imoveis';
+import { ImovelService } from '../imovel.service';
 
 @Component({
-  selector: 'app-cep-read-logradouro',
+  selector: 'app-Imovel-read-logradouro',
   templateUrl: './cep-read-logradouro.component.html',
   styleUrls: ['./cep-read-logradouro.component.css']
 })
-export class CepReadLogradouroComponent implements OnInit {
-  cep : Cep[] 
+export class ImovelReadLogradouroComponent implements OnInit {
+  imoveisArray: Imovel[] = imoveisArray;
 
 
-  displayedColumns = ['cep','rua', 'bairro']; 
-  constructor( private productService : ProductService, private route : ActivatedRoute) { 
-    this.cep = [{}]
+  displayedColumns = ['Imovel','rua', 'bairro']; 
+  constructor( private ImovelService : ImovelService, private route : ActivatedRoute) { 
+    this.imoveisArray = []
 
   }
 
   ngOnInit(): void {
 
-    const logradouro = ""+ this.route.snapshot.paramMap.get("cep");
-    this.productService.readByAllCep(logradouro).subscribe( cep => {
-      this.cep = cep
+    const logradouro = " "+ this.route.snapshot.paramMap.get("Imovel");
+    this.ImovelService.readByAllImovel(logradouro).subscribe( Imovel => {
+      this.imoveisArray = Imovel
       
     })
 

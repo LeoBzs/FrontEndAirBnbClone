@@ -1,0 +1,9 @@
+<br>
+<div class="imovel" *ngFor="let imovel of imoveis | myfilter: displays" class="imoveisPais">
+<div *ngIf="imovel">
+  
+  <h3>{{ imovel.campo }}</h3>
+  <h3>Preço: {{ imovel.preco }}</h3>
+
+</div>
+</div>

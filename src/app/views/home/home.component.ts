@@ -1,7 +1,8 @@
 import { HeaderService } from './../../components/template/header/header.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Cep } from 'src/app/components/product/cep.model';
+import { ImovelService } from 'src/app/components/product/imovel.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +11,16 @@ import { Cep } from 'src/app/components/product/cep.model';
 })
 export class HomeComponent implements OnInit {
 
-  cep : string | undefined;
+  imoveisArray = this.imovelService.getImoveis();
 
-  constructor(private headerService: HeaderService, private router: Router) { 
+  Imovel : string | undefined;
+
+  checkoutForm = this.formBuilder.group({
+    campo: '',
+  });
+
+  constructor (private headerService: HeaderService, private formBuilder: FormBuilder,
+    private router: Router, private imovelService : ImovelService) { 
 
     headerService.headerData ={
       title: 'Inicio',
@@ -23,14 +31,18 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
   
-  getRua(cep:string) {
-    this.router.navigate(['cep/read/logradouro/', cep]);    
   }
 
-  getCep(cep:string) {
-    this.router.navigate(['cep/read/', cep]);    
+  onSubmit(): void {
+    this.checkoutForm.reset();
   }
 
+  getUrl(){
+  return "url('https://news.airbnb.com/wp-content/uploads/sites/4/2021/05/m24NewsroomFeatured_3003x1287.jpg?w=1536')";
+  }
+
+  getResult(campo : string) {
+      this.router.navigate(['/menu/procura', campo]);
+  }
 }

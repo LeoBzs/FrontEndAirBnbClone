@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Cep } from './../cep.model';
-
-import { ProductService } from './../product.service';
+import { ImovelService } from '../imovel.service';
 
 @Component({
   selector: 'app-cep-read',
@@ -11,23 +9,18 @@ import { ProductService } from './../product.service';
 })
 export class CepReadComponent implements OnInit {
 
- 
-  DoViaCep : Cep
 
-    constructor( private productService : ProductService, private route : ActivatedRoute) { 
- 
- 
-     this.DoViaCep = {}
+    constructor( private imovelService : ImovelService, private route : ActivatedRoute) { 
  
    
     }
   
     ngOnInit(): void {
       
-      const cep = ""+ this.route.snapshot.paramMap.get("cep");
-      this.productService.readByCep(cep).subscribe(cep => {
-        this.DoViaCep = cep
-      
+      const logradouro = ""+ this.route.snapshot.paramMap.get("Imovel");
+    this.imovelService.readByAllImovel(logradouro).subscribe( Imovel => {
+       Imovel
+
       })
 
     }

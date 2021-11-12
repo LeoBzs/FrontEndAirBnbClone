@@ -4,6 +4,13 @@ font-weight: 300;
 line-height: 1.2;
 }
 
+.button{
+    font-size: 1rem;
+    font-weight: 100;
+    padding-top: 15px;
+    color: #FF385C;
+}
+
 .home .subtitle{
     font-size: 1.1rem;
     
@@ -11,5 +18,4 @@ line-height: 1.2;
 .home{
 margin: 30px;
 margin-right: 800px;
-
 }
