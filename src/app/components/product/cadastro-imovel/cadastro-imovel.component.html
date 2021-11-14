@@ -1,1 +1,29 @@
-<p>cadastro-imovel works!</p>
+<div >
+<form class="FormImovel"> 
+   
+        <label for="Endereco" ><strong> Endereço: </strong></label><br>
+        Cep:    <input type="text" name="cep" value="" size="60" class="FormImovel" placeholder="xxxxx-xxx"><br><br>
+        Rua:    <input type="text" name="rua" value="" size="60" class="FormImovel" placeholder="Rua"><br><br>
+        Bairro: <input type="text" name="bairro" value="" size="58" class="FormImovel" placeholder="Bairro"><br><br> 
+        UF:     <input type="text" name="uf" value="" size="61" class="FormImovel" placeholder="RS"><br><br> 
+        Cidade  <input type="text" name="cidade" value="" size="58" class="FormImovel" placeholder="Cidade"><br><br> 
+        Complemento: <input type="text" name="complemento" value="" size="40" class="FormImovel" placeholder="ap xxx bloco 1"><br><br>
+        Numero: <input type="number" value = "nome" size="40" placeholder="0" onChange={} ><br> <br>
+        
+        <label for="Descrição"><strong>Descrição do Imóvel:</strong></label><br>
+        ArCondicionado:   <input type="radio" id= "Não" name="ArCondicionado" value="true"> Sim
+                        <input type="radio" id="Sim" name="ArCondicionado" value="false"> Não
+        <br> <br>
+        Quantidade de quartos: <input type="number" value = "quartos" size="3" placeholder="0" onChange={} ><br> <br>
+        Cama de Casal: <input type="number" value = "camaCasal" size="6" placeholder="0" onChange={} ><br> <br>
+        Cama de Solteiro: <input type="number" value = "camaSolteiro" size="5" placeholder="0" onChange={} ><br> <br>
+        
+        <label for="Descrição"><strong>Descrição detalhada do Imóvel:</strong></label><br>
+        <textarea name="tipo" value ="máximo de 10 linhas"    rows="10" cols="80" onChange={}> 
+
+        </textarea><br />
+        <button type="button"  onclick="">
+            Enviar
+        </button>
+    </form>
+  </div>
