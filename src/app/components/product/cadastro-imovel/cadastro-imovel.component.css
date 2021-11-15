@@ -2,3 +2,13 @@
 .FormImovel{
     color: black;
 }
+.container {
+        display: grid;
+        grid-template-columns: 20% 50px 40%;
+        grid-template-rows: 50px 50px;
+        grid-column-gap: 200px;
+        grid-row-gap:680px;   
+    }
+.direita{
+        color: black;
+}
