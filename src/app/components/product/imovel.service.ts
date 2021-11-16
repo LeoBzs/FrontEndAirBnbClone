@@ -9,12 +9,28 @@ import { imoveisArray, Imovel } from 'src/app/imoveis';
 })
 export class ImovelService {
 
+  imovelURL = "https://airbnd-clone-back-springboot.herokuapp.com/imovel/listar"
+  imoveIdURL = "https://airbnd-clone-back-springboot.herokuapp.com/imovel/" 
   imoveisArray: Imovel[] = imoveisArray;
 
   constructor(private http : HttpClient) { }
 
   configUrl = 'assets/assetsArray.json';
 
+
+
+  readyImovelById(id:number):  Observable<any>{
+    return this.http.get<any>(this.imoveIdURL)
+}
+
+createImovel(imovel : any): Observable<any>{
+  return this.http.post<any>(this.imoveIdURL, imovel)
+}
+
+  
+  readyAllImoveis():  Observable<any[]>{
+      return this.http.get<any[]>(this.imovelURL)
+  }
 
     readByAllImovel(Imovel: string) : Observable<Imovel[]>{
         const url = `http://localhost:4200/menu/procura/` + Imovel;
