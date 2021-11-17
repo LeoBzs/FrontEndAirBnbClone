@@ -1,11 +1,10 @@
 
 export interface Usuario
 {
-    id: number,
+    id?: number,
     nome: string,
     idade: number,
     telefone: number,
     email: string,
-    senha: string,
-    imoveis: any[]
+    senha: string
   }

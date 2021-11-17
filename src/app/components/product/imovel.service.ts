@@ -1,3 +1,4 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -11,6 +12,7 @@ export class ImovelService {
 
   imovelURL = "https://airbnd-clone-back-springboot.herokuapp.com/imovel/listar"
   imoveIdURL = "https://airbnd-clone-back-springboot.herokuapp.com/imovel/" 
+  userdURL = "https://airbnd-clone-back-springboot.herokuapp.com/usuario/salvar/"
   imoveisArray: Imovel[] = imoveisArray;
 
   constructor(private http : HttpClient) { }
@@ -25,6 +27,9 @@ export class ImovelService {
 
 createImovel(imovel : any): Observable<any>{
   return this.http.post<any>(this.imoveIdURL, imovel)
+}
+createUser(user : any): Observable<any>{
+  return this.http.post<any>(this.userdURL, user)
 }
 
   
