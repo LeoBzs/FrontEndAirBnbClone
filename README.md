@@ -8,6 +8,8 @@ da sua preferência.
 Entre na Pasta **_raiz_**, acesse o terminal e execute o seguinte comando:
 
 **$ npm install**
+Após:
+**$ npm start**
 
 Será iniciado um "servidor de frontend" na porta: **http://localhost:4200/**
 que irá monitorar toda e qualquer alteração no projeto na parte de frontend e

@@ -1,102 +1,104 @@
+  <mat-card>
+    <mat-card-title>Cadastro De Imovel:</mat-card-title>
+    <form>
+  
+      <mat-form-field>
+         <input matInput placeholder="Ar Condicionado" 
+           [(ngModel)]="imovel.arCondicionado" name="arCondicionado">
+       </mat-form-field>
+
+       <mat-form-field>
+           <input matInput placeholder="Quantidade de Camas de Solteiro:" 
+           [(ngModel)]="imovel.camaSolteiro" name="camaSolteiro">
+       </mat-form-field>
+
+       <mat-form-field>
+        <input matInput placeholder="Camas de Casal" 
+        [(ngModel)]="imovel.camaCasal" name="camaCasal">
+       </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Quantidade de Comodos:" 
+    [(ngModel)]="imovel.quartos" name="quartos">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Descrição Detalhada" 
+    [(ngModel)]="imovel.descricao" name="descricao">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Valor da Diária " 
+    [(ngModel)]="imovel.valorDaDiaria" name="valorDaDiaria">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Telefone para Contato " 
+    [(ngModel)]="imovel.telefoneProprietario" name="telefoneProprietario">
+  </mat-form-field>
+  
+</form>
+
+</mat-card>
+
+</div><br>
+
+
 <div clas="container">
-    <mat-card>
-      <mat-card-title>Cadastro De Imovel:</mat-card-title>
-      <form>
-    
-        <mat-form-field>
-           <input matInput placeholder="Ar Condicionado" 
-             [(ngModel)]="imovel.arCondicionado" name="arCondicionado">
-         </mat-form-field>
-  
-         <mat-form-field>
-             <input matInput placeholder="Quantidade de Camas de Solteiro:" 
-             [(ngModel)]="imovel.camaSolteiro" name="camaSolteiro">
-         </mat-form-field>
-  
-         <mat-form-field>
-          <input matInput placeholder="Camas de Casal" 
-          [(ngModel)]="imovel.camaCasal" name="camaCasal">
-         </mat-form-field>
-  
-    <mat-form-field>
-      <input matInput placeholder="Quantidade de Comodos:" 
-      [(ngModel)]="imovel.quartos" name="quartos">
-    </mat-form-field>
-  
-    <mat-form-field>
-      <input matInput placeholder="Descrição Detalhada" 
-      [(ngModel)]="imovel.descricao" name="descricao">
-    </mat-form-field>
-  
-    <mat-form-field>
-      <input matInput placeholder="Valor da Diária " 
-      [(ngModel)]="imovel.valorDaDiaria" name="valorDaDiaria">
-    </mat-form-field>
-  
-    <mat-form-field>
-      <input matInput placeholder="Telefone para Contato " 
-      [(ngModel)]="imovel.telefoneProprietario" name="telefoneProprietario">
-    </mat-form-field>
-    
-  </form>
-  
-  </mat-card>
-  
-  </div><br>
-  
-  
-  <div clas="container">
-    <mat-card>
-      <mat-card-title>Endereço do Imovel:</mat-card-title>
-      <form>
-        
-        <mat-form-field>
-          <input matInput placeholder="Cep " 
-          [(ngModel)]="imovel.cep" name="cep">
-        </mat-form-field>
-        
-        <mat-form-field>
-          <input matInput placeholder="Cidade " 
-          [(ngModel)]="imovel.cidade" name="cidade">
-        </mat-form-field>
-  
-        <mat-form-field>
-          <input matInput placeholder="Bairro " 
-          [(ngModel)]="imovel.bairro" name="bairro">
-        </mat-form-field>
-  
-        <mat-form-field>
-          <input matInput placeholder="UF " 
-          [(ngModel)]="imovel.uf" name="uf">
-        </mat-form-field>
-        
-        <mat-form-field>
-          <input matInput placeholder="Rua " 
-          [(ngModel)]="imovel.rua" name="rua">
-        </mat-form-field>
-        
-        <mat-form-field>
-          <input matInput placeholder="Numero " 
-          [(ngModel)]="imovel.numero" name="numero">
-        </mat-form-field>
-        
-        
-        <mat-form-field>
-          <input matInput placeholder="Complemento " 
-          [(ngModel)]="imovel.complemento" name="complemento">
-        </mat-form-field>
-        
-        </form>
-        
-            <button class="mat-raised-button" (click)="postImovel()"  color="primary">
-              Salvar    
-            </button> 
-        
-            <button mat-raised-button (click)="cancel()" >
-            Cancelar    
-            </button>
-        
-        </mat-card>
-  
-  </div>
-  
+  <mat-card>
+    <mat-card-title>Endereço do Imovel:</mat-card-title>
+    <form>
+      
+      <mat-form-field>
+        <input matInput placeholder="Cep " 
+        [(ngModel)]="imovel.cep" name="cep">
+      </mat-form-field>
+      
+      <mat-form-field>
+        <input matInput placeholder="Cidade " 
+        [(ngModel)]="imovel.cidade" name="cidade">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Bairro " 
+        [(ngModel)]="imovel.bairro" name="bairro">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="UF " 
+        [(ngModel)]="imovel.uf" name="uf">
+      </mat-form-field>
+      
+      <mat-form-field>
+        <input matInput placeholder="Rua " 
+        [(ngModel)]="imovel.rua" name="rua">
+      </mat-form-field>
+      
+      <mat-form-field>
+        <input matInput placeholder="Numero " 
+        [(ngModel)]="imovel.numero" name="numero">
+      </mat-form-field>
+      
+      
+      <mat-form-field>
+        <input matInput placeholder="Complemento " 
+        [(ngModel)]="imovel.complemento" name="complemento">
+      </mat-form-field>
+      
+      </form>
+      
+          <button class="mat-raised-button" (click)="postImovel()"  color="primary">
+            Salvar    
+          </button> 
+      
+          <button mat-raised-button (click)="cancel()" >
+          Cancelar    
+          </button>
+      
+      </mat-card>
+
+</div>
+
+
+
+

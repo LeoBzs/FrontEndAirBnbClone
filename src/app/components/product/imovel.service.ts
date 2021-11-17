@@ -1,3 +1,4 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -9,6 +10,9 @@ import { imoveisArray, Imovel } from 'src/app/imoveis';
 })
 export class ImovelService {
 
+  imovelURL = "https://airbnd-clone-back-springboot.herokuapp.com/imovel/listar"
+  imoveIdURL = "https://airbnd-clone-back-springboot.herokuapp.com/imovel/" 
+  userURL = "https://airbnd-clone-back-springboot.herokuapp.com/usuario/salvar/"
   imoveisArray: Imovel[] = imoveisArray;
 
   constructor(private http : HttpClient) { }
@@ -27,6 +31,23 @@ export class ImovelService {
       return this.http.post<Imovel[]>(this.configUrl, Imovel);
     }
 
+
+  readyImovelById(id:number):  Observable<any>{
+    return this.http.get<any>(this.imoveIdURL)
+}
+
+createImovel(imovel : any): Observable<any>{
+  return this.http.post<any>(this.imoveIdURL, imovel)
+}
+createUser(user : any): Observable<any>{
+  return this.http.post<any>(this.userURL, user)
+}
+
+  
+  readyAllImoveis():  Observable<any[]>{
+      return this.http.get<any[]>(this.imovelURL)
+  }
+
     readByAllImovel(Imovel: string) : Observable<Imovel[]>{
         const url = `http://localhost:4200/menu/procura/` + Imovel;
         return this.http.get<Imovel[]>(url)
@@ -41,7 +62,6 @@ export class ImovelService {
     getImoveis(){
       return this.imoveisArray;
     }
-    createImovel(imovel : any): Observable<any>{
-      return this.http.post<any>(this.imoveIdURL, imovel)
-    }
+
 }
+

@@ -1,19 +1,41 @@
-<div >
-    <form class="FormLocatario"> 
-       
-            <label for="Endereco" ><strong> Endereço: </strong></label><br>
-            Nome:    <input type="text" name="nome" value="" size="60" class="FormLocatario" placeholder="Nome"><br><br>
-            idade:    <input type="number" name="idade" value="" size="60" class="FormLocatario" placeholder="0"><br><br>
-            <label for="Telefone" ><strong> Telefone: </strong></label><br>
-            DDD: <input type="number" name="telefone" value="" size="1" class="FormLocatario" placeholder="DDD"> Tel: 
-                 <input type="number" name="telefone" value="" size="58" class="FormLocatario" placeholder="Telefone"> <br><br>
 
-            email:     <input type="text" name="email" value="" size="61" class="FormLocatario" placeholder="joão@server.com"><br><br> 
-            senha  <input type="text" name="senha" value="" size="58" class="FormLocatario" placeholder="Senha@123"><br><br>     
-           <br>
-            <button type="button"  onclick="">
-                Enviar
-            </button>
-        </form>
-</div>
-    
+<mat-card>
+        <mat-card-title>Cadastro de Usuario:</mat-card-title>
+        <form>
+          
+          <mat-form-field>
+            <input matInput placeholder="Nome" 
+            [(ngModel)]="usuario.nome" name="name">
+          </mat-form-field>
+
+          <mat-form-field>
+           <input matInput placeholder="Idade" 
+            [(ngModel)]="usuario.idade" name="idade">
+          </mat-form-field>
+
+         <mat-form-field>
+           <input matInput placeholder="Telefone" 
+            [(ngModel)]="usuario.telefone" name="telefone">
+         </mat-form-field>
+
+         <mat-form-field>
+            <input matInput placeholder="Email" 
+            [(ngModel)]="usuario.email" name="email">
+        </mat-form-field>
+
+        <mat-form-field>
+             <input matInput placeholder="Senha " 
+            [(ngModel)]="usuario.senha" name="senha">
+        </mat-form-field>
+          
+          </form>
+          
+              <button class="mat-raised-button" (click)="postUser()"  color="primary">
+                Salvar    
+              </button> 
+          
+              <button mat-raised-button (click)="cancel()" >
+              Cancelar    
+              </button>
+          
+          </mat-card>

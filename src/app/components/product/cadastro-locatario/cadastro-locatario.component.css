@@ -1,8 +1,5 @@
-.FormLocatario{
- 
-    color: black;
-}
-div{
-    color: black;
-    margin-right: 40%;
+
+form{
+    display: flex;
+    flex-direction: column;
 }
