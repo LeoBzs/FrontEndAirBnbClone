@@ -17,8 +17,19 @@ export class ImovelService {
 
   constructor(private http : HttpClient) { }
 
-  configUrl = 'assets/assetsArray.json';
+  configUrl = 'https://airbnd-clone-back-springboot.herokuapp.com/imovel/listar';
 
+  configUrlAdd = 'https://airbnd-clone-back-springboot.herokuapp.com/imovel/salvar';
+
+  imoveIdURL = "https://airbnd-clone-back-springboot.herokuapp.com/imovel/"; 
+                          
+    getAll(): Observable<Imovel[]> {
+      return this.http.get<Imovel[]>(this.configUrl);
+    }
+
+    addImovel(Imovel : any): Observable<Imovel[]> {
+      return this.http.post<Imovel[]>(this.configUrl, Imovel);
+    }
 
 
   readyImovelById(id:number):  Observable<any>{
@@ -47,12 +58,10 @@ createUser(user : any): Observable<any>{
     const url = 'http://localhost:4200/menu/procura/'
       return this.http.get<Imovel>('http://localhost:4200/menu/procura/' + item);
     }
-    
-    getAll(): Observable<Imovel[]> {
-      return this.http.get<Imovel[]>(this.configUrl);
-    }
 
     getImoveis(){
       return this.imoveisArray;
     }
+
 }
+

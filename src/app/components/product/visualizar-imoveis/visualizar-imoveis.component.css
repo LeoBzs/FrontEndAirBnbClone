@@ -6,19 +6,10 @@
     font-size: large;
     color: black;
 }
-.example-card-greece-one {
+.example-card {
     max-width: 400px;
   }
   
-  .example-header-image-greece-one {
-    background-image: url('https://a0.muscache.com/im/pictures/user/82897ce3-061e-40ed-aab7-25fdcea2d900.jpg?im_w=240');
-    background-size: cover;
-  }
-
-  .example-card-germany-one {
-    max-width: 400px;
-  }
-.example-header-image-germany-one {
-    background-image: url('https://a0.muscache.com/im/pictures/user/bfbb53da-bbba-4389-8da6-cff6dd77b171.jpg?im_w=240');
+  .example-header {
     background-size: cover;
   }

@@ -26,6 +26,10 @@ export class HouseSearchComponent implements OnInit {
       .subscribe((imovel) => (this.imovel = imovel));
   }
   
+  getUrl(){
+    return "url('https://media.istockphoto.com/vectors/town-map-seamless-texture-vector-id1151366980')";
+    }
+    
   routeParams = this.route.snapshot.paramMap;
   displays = String(this.routeParams.get('campo')); 
   
