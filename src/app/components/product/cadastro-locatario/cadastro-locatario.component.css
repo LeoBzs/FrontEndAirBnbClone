@@ -1,15 +1,5 @@
-.FormLocatario{
- 
-    color: black;
-}
-div{
-    color: black;
-    margin-right: 40%;
-}
-#buttonCancel{
-    margin-left: 20px;
-   
-}
-button{
-    width: 100px;
+
+form{
+    display: flex;
+    flex-direction: column;
 }

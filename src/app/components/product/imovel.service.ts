@@ -12,7 +12,7 @@ export class ImovelService {
 
   imovelURL = "https://airbnd-clone-back-springboot.herokuapp.com/imovel/listar"
   imoveIdURL = "https://airbnd-clone-back-springboot.herokuapp.com/imovel/" 
-  userdURL = "https://airbnd-clone-back-springboot.herokuapp.com/usuario/salvar/"
+  userURL = "https://airbnd-clone-back-springboot.herokuapp.com/usuario/salvar/"
   imoveisArray: Imovel[] = imoveisArray;
 
   constructor(private http : HttpClient) { }
@@ -29,7 +29,7 @@ createImovel(imovel : any): Observable<any>{
   return this.http.post<any>(this.imoveIdURL, imovel)
 }
 createUser(user : any): Observable<any>{
-  return this.http.post<any>(this.userdURL, user)
+  return this.http.post<any>(this.userURL, user)
 }
 
   

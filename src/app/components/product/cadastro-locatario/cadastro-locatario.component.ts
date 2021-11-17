@@ -15,7 +15,7 @@ export class CadastroLocatarioComponent implements OnInit {
     idade: 0,
     telefone: 0,
     email: "",
-    senha: "",
+    senha: ""
   }
 
   constructor(private service : ImovelService, private router : Router) { }
@@ -23,7 +23,7 @@ export class CadastroLocatarioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  postImovel(): void {
+  postUser(): void {
     this.service.createUser(this.usuario).subscribe( () =>{   
     this.router.navigate([''])} )
   }
