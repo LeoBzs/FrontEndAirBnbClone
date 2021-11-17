@@ -36,8 +36,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
-import { MatDatepickerIntl } from '@angular/material/datepicker';
-import { CepReadComponent } from './components/product/cep-read/cep-read.component';
 import { ImovelReadLogradouroComponent } from './components/product/cep-read-logradouro/cep-read-logradouro.component';
 import { CadastroLocatarioComponent } from './components/product/cadastro-locatario/cadastro-locatario.component';
 import { CadastroImovelComponent } from './components/product/cadastro-imovel/cadastro-imovel.component';
@@ -55,7 +53,6 @@ registerLocaleData(localePt);
     HomeComponent,
     RedDirective,
     MyFilterPipe,
-    CepReadComponent,
     ImovelReadLogradouroComponent,
     CadastroLocatarioComponent,
     CadastroImovelComponent,
