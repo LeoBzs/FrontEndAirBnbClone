@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { ImovelService } from 'src/app/components/product/imovel.service';
 
 @Component({
   templateUrl: './visualizar-imoveis.component.html',
   styleUrls: ['./visualizar-imoveis.component.css']
 })
+
 export class VisualizarImoveisComponent implements OnInit {
 
-  constructor() { }
+  imoveis = this.imovelService.getAll();
+
+  constructor(private imovelService : ImovelService) { }
 
   ngOnInit(): void {
     
@@ -21,5 +25,4 @@ export class VisualizarImoveisComponent implements OnInit {
   getUrl(){
     return "url('https://media.istockphoto.com/vectors/town-map-seamless-texture-vector-id1151366980')";
     }
-
 }

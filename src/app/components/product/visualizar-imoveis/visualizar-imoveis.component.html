@@ -1,65 +1,31 @@
 <p><strong class="warningCovid"> * Confira as restrições de viagem relacionadas à COVID-19 antes de fazer uma reserva.</strong></p>
 <mat-divider></mat-divider>
+<div class="imovel" *ngFor="let imovel of imoveis | async" class="imoveisPais">
 <div [ngStyle]="{'background-image': getUrl()}">
-<span id="grecia">
-<mat-card class="example-card-greece-one">
+<mat-card class="example-card">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image-greece-one"></div>
-      <mat-card-title>Lovely studio in Athens city center</mat-card-title>
-      <mat-card-subtitle>Atenas, Grécia</mat-card-subtitle>
+      <div mat-card-avatar class="example-header"></div>
+      <mat-card-title> {{imovel.bairro}} </mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="https://a0.muscache.com/im/pictures/283182b1-33ad-4f50-b8a5-923a1b77b4b3.jpg?im_w=960" alt="Imóvel grecia #1">
     <mat-card-content>
       <p>
-        A lovely just renovated studio in the heart of Athens! Located at Excarchia neighbourhood, one of the most artistic and alternative areas of Athens, with a lot of real local Greek restaurants ‘raki meze’ and small bars around
-The flat is in a quiet street, Just 6 min walking distance from metro (omonoia- red line) and other public transportation.
+       {{imovel.descricao}}
       </p>
     </mat-card-content> 
     <mat-card-actions>
-        
       <mat-form-field id="formOne" appearance="fill">
         <mat-label>Confira a disponibilidade!</mat-label>
         <mat-date-range-input [rangePicker]="picker">
-          <input matStartDate placeholder="Data início">
+          <input matStartDate placeholder="Data início">  
           <input matEndDate   placeholder="Data término">
         </mat-date-range-input>
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-date-range-picker #picker></mat-date-range-picker>
       </mat-form-field>
-          <button mat-button>Reservar</button>
-
+          <button mat-button>Reservar  -  R$ {{imovel.valorDaDiaria}} / dia   -  Contato: {{imovel.telefoneProprietario}}</button>
     </mat-card-actions>
   </mat-card>
-</span>
-  <mat-divider>
-  </mat-divider>
-<span id="alemanha">
-  <mat-card class="example-card-germany-one">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image-germany-one"></div>
-      <mat-card-title>Kontaktfrei! Apartment im Zentrum Berlins.</mat-card-title>
-      <mat-card-subtitle>Berlim, Alemanha</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://a0.muscache.com/im/pictures/8687b6e3-21e5-45d1-b5e2-d0c2977eb978.jpg?im_w=960" alt="Imóvel grecia #1">
-    <mat-card-content>
-      <p>
-        Hey nice People!
-        I’m Richard and I hope i will give you a beautiful stay in Berlin while I’m out of the city. My place is located in Wilhelmstraße wich makes it incredible accessible to all the great places in the centre of Berlin.
-        Walk to the Brandenburger Tor or checkpoint Charlie in ease . I still recommend to rent a bike! 
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-        <mat-form-field id="formtwo" appearance="fill">
-            <mat-label>Confira a disponibilidade!</mat-label>
-            <mat-date-range-input [rangePicker]="picker">
-              <input matStartDate placeholder="Data início">
-              <input matEndDate   placeholder="Data término">
-            </mat-date-range-input>
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-date-range-picker #picker></mat-date-range-picker>
-          </mat-form-field>
-          <button mat-button>Reservar</button>
-    </mat-card-actions>
-  </mat-card>
-</span>
+</div>
 </div>

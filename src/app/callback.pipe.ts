@@ -15,7 +15,7 @@ export class MyFilterPipe implements PipeTransform {
             return imoveisArray;
         }
 
-        return imoveisArray.filter(imoveis => imoveis.campo.indexOf(termo) !== -1);
+        return imoveisArray.filter(imoveis => imoveis.bairro.indexOf(termo) !== -1);
     }
    
    
