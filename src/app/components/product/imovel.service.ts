@@ -21,7 +21,6 @@ export class ImovelService {
 
   configUrlAdd = 'https://airbnd-clone-back-springboot.herokuapp.com/imovel/salvar';
 
-  imoveIdURL = "https://airbnd-clone-back-springboot.herokuapp.com/imovel/"; 
                           
     getAll(): Observable<Imovel[]> {
       return this.http.get<Imovel[]>(this.configUrl);

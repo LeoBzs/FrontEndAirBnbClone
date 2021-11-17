@@ -2,7 +2,6 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MyFilterPipe } from './callback.pipe';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,22 +11,17 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component'
 import { MatNativeDateModule } from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { MatSidenavModule }from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { MatCardModule }from '@angular/material/card';
-
 import { RedDirective } from './directives/red.directive';
-
 import { MatButtonModule } from '@angular/material/button'
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
 import { HttpClientModule } from'@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
-
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort'
@@ -36,9 +30,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
-import { MatDatepickerIntl } from '@angular/material/datepicker';
-import { CepReadComponent } from './components/product/cep-read/cep-read.component';
-import { ImovelReadLogradouroComponent } from './components/product/cep-read-logradouro/cep-read-logradouro.component';
 import { CadastroLocatarioComponent } from './components/product/cadastro-locatario/cadastro-locatario.component';
 import { CadastroImovelComponent } from './components/product/cadastro-imovel/cadastro-imovel.component';
 import { HouseSearchComponent } from './components/product/house-search/house-search.component';
@@ -55,8 +46,6 @@ registerLocaleData(localePt);
     HomeComponent,
     RedDirective,
     MyFilterPipe,
-    CepReadComponent,
-    ImovelReadLogradouroComponent,
     CadastroLocatarioComponent,
     CadastroImovelComponent,
     HouseSearchComponent,
