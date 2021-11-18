@@ -1,5 +1,3 @@
-
-
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from '../../template/Usuario.model';
@@ -10,7 +8,7 @@ import { ImovelService } from '../imovel.service';
   styleUrls: ['./cadastro-locatario.component.css']
 })
 export class CadastroLocatarioComponent implements OnInit {
-  usuario : any = {
+  usuario : Usuario = {
     nome: "",
     idade: 0,
     telefone: 0,

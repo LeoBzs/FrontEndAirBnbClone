@@ -5,7 +5,7 @@
 
 
       <mat-form-field >
-        <mat-label>Tem ArCondicionado"</mat-label>
+        <mat-label>Tem ArCondicionado?"</mat-label>
         <mat-select>
           <mat-option [(ngModel)]="imovel.arCondicionado"  value="true">Sim</mat-option>
           <mat-option [(ngModel)]="imovel.arCondicionado" value="false">Não</mat-option>
@@ -29,16 +29,18 @@
 
   <mat-form-field>
     <mat-label>Descrição Detalhada</mat-label>
-    <textarea matInput
+    <textarea matInput required
     [(ngModel)]="imovel.descricao" 
     ></textarea>
   </mat-form-field>
 
 
-  <mat-form-field>
-    <input matInput placeholder="Valor da Diária " 
-    [(ngModel)]="imovel.valorDaDiaria" name="valorDaDiaria" required>
+  <mat-form-field  floatLabel="always">
+    <mat-label>Valor da Diária</mat-label>
+    <input   [(ngModel)]="imovel.valorDaDiaria" matInput  class="example-left-align" placeholder="0">
+    <span matPrefix>$&nbsp;</span>
   </mat-form-field>
+
 
   <mat-form-field>
     <input matInput placeholder="Telefone para Contato " 

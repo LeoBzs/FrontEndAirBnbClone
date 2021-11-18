@@ -3,3 +3,7 @@ form{
     display: flex;
     flex-direction: column;
 }
+
+span{
+    margin-left: 8%;
+}
