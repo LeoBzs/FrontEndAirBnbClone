@@ -2,11 +2,6 @@
   <mat-card>
     <mat-card-title>Cadastro De Imovel:</mat-card-title>
     <form>
-  
-      <mat-form-field>
-         <input matInput placeholder="Ar Condicionado" 
-           [(ngModel)]="imovel.arCondicionado" name="arCondicionado">
-       </mat-form-field>
 
        <mat-form-field>
            <input matInput placeholder="Quantidade de Camas de Solteiro:" 
@@ -20,22 +15,22 @@
 
   <mat-form-field>
     <input matInput placeholder="Quantidade de Comodos:" 
-    [(ngModel)]="imovel.quartos" name="quartos">
+    [(ngModel)]="imovel.quartos" name="quartos" required>
   </mat-form-field>
 
   <mat-form-field>
     <input matInput placeholder="Descrição Detalhada" 
-    [(ngModel)]="imovel.descricao" name="descricao">
+    [(ngModel)]="imovel.descricao" name="descricao" required>
   </mat-form-field>
 
   <mat-form-field>
     <input matInput placeholder="Valor da Diária " 
-    [(ngModel)]="imovel.valorDaDiaria" name="valorDaDiaria">
+    [(ngModel)]="imovel.valorDaDiaria" name="valorDaDiaria" required>
   </mat-form-field>
 
   <mat-form-field>
     <input matInput placeholder="Telefone para Contato " 
-    [(ngModel)]="imovel.telefoneProprietario" name="telefoneProprietario">
+    [(ngModel)]="imovel.telefoneProprietario" name="telefoneProprietario" required>
   </mat-form-field>
   
 </form>
@@ -52,38 +47,38 @@
       
       <mat-form-field>
         <input matInput placeholder="Cep " 
-        [(ngModel)]="imovel.cep" name="cep">
+        [(ngModel)]="imovel.cep" name="cep" required>
       </mat-form-field>
       
       <mat-form-field>
         <input matInput placeholder="Cidade " 
-        [(ngModel)]="imovel.cidade" name="cidade">
+        [(ngModel)]="imovel.cidade" name="cidade" required>
       </mat-form-field>
 
       <mat-form-field>
         <input matInput placeholder="Bairro " 
-        [(ngModel)]="imovel.bairro" name="bairro">
+        [(ngModel)]="imovel.bairro" name="bairro" required>
       </mat-form-field>
 
       <mat-form-field>
         <input matInput placeholder="UF " 
-        [(ngModel)]="imovel.uf" name="uf">
+        [(ngModel)]="imovel.uf" name="uf" required>
       </mat-form-field>
       
       <mat-form-field>
         <input matInput placeholder="Rua " 
-        [(ngModel)]="imovel.rua" name="rua">
+        [(ngModel)]="imovel.rua" name="rua" required>
       </mat-form-field>
       
       <mat-form-field>
         <input matInput placeholder="Numero " 
-        [(ngModel)]="imovel.numero" name="numero">
+        [(ngModel)]="imovel.numero" name="numero" required>
       </mat-form-field>
       
       
       <mat-form-field>
         <input matInput placeholder="Complemento " 
-        [(ngModel)]="imovel.complemento" name="complemento">
+        [(ngModel)]="imovel.complemento" name="complemento" required>
       </mat-form-field>
       
       </form>

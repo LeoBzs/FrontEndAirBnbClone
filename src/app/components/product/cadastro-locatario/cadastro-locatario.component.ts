@@ -10,7 +10,7 @@ import { ImovelService } from '../imovel.service';
   styleUrls: ['./cadastro-locatario.component.css']
 })
 export class CadastroLocatarioComponent implements OnInit {
-  usuario : Usuario = {
+  usuario : any = {
     nome: "",
     idade: 0,
     telefone: 0,
