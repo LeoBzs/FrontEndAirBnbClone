@@ -3,6 +3,15 @@
     <mat-card-title>Cadastro De Imovel:</mat-card-title>
     <form>
 
+
+      <mat-form-field >
+        <mat-label>Tem ArCondicionado"</mat-label>
+        <mat-select>
+          <mat-option [(ngModel)]="imovel.arCondicionado"  value="true">Sim</mat-option>
+          <mat-option [(ngModel)]="imovel.arCondicionado" value="false">Não</mat-option>
+        </mat-select>
+      </mat-form-field>
+
        <mat-form-field>
            <input matInput placeholder="Quantidade de Camas de Solteiro:" 
            [(ngModel)]="imovel.camaSolteiro" name="camaSolteiro">
