@@ -8,6 +8,7 @@ da sua preferência.
 Entre na Pasta **_raiz_**, acesse o terminal e execute o seguinte comando:
 
 **$ npm install**
+
 Após:
 **$ npm start**
 
