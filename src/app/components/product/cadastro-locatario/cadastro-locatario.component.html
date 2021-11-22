@@ -1,31 +1,33 @@
 
 <mat-card>
         <mat-card-title>Cadastro de Usuario:</mat-card-title>
-        <form>
+        <form id="frmEmail">
           
           <mat-form-field>
             <input matInput placeholder="Nome" 
-            [(ngModel)]="usuario.nome" name="name">
+            [(ngModel)]="usuario.nome" name="name" required>
           </mat-form-field>
 
           <mat-form-field>
-           <input matInput placeholder="Idade" 
-            [(ngModel)]="usuario.idade" name="idade">
+           <input type=”number” min="18"  max="110" matInput placeholder="Idade: min 18" 
+            [(ngModel)]="usuario.idade" name="idade" required>
           </mat-form-field>
 
          <mat-form-field>
-           <input matInput placeholder="Telefone" 
-            [(ngModel)]="usuario.telefone" name="telefone">
+           <input type="tel" matInput  placeholder="Telefone : DD988889999" pattern="[0-9]{11}" 
+            [(ngModel)]="usuario.telefone" name="telefone" required>
          </mat-form-field>
 
          <mat-form-field>
-            <input matInput placeholder="Email" 
-            [(ngModel)]="usuario.email" name="email">
+            <input type=”email”  matInput placeholder="Email: ex joao@airbnb.com" 
+            [(ngModel)]="usuario.email" name="email" multiple required>
         </mat-form-field>
+     
+
 
         <mat-form-field>
-             <input matInput placeholder="Senha " 
-            [(ngModel)]="usuario.senha" name="senha">
+             <input type=”password” matInput placeholder="Senha " 
+            [(ngModel)]="usuario.senha" name="senha" required>
         </mat-form-field>
           
           </form>
@@ -39,3 +41,4 @@
               </button>
           
           </mat-card>
+    
