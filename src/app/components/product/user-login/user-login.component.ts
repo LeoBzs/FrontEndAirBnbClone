@@ -10,20 +10,27 @@ import { ImovelService } from '../imovel.service';
 })
 export class UserLoginComponent implements OnInit {
   login : any = {
-    email :  " ",
-    senha: " "
+    email :  "",
+    senha: ""
   }
 
-  
-  constructor(private service : ImovelService, private router : Router) { }
+  valid: boolean 
+
+  constructor(private service : ImovelService, private router : Router) {
+    this.valid = true
+   }
 
   ngOnInit(): void {
   }
 
   userLogin(): void {
-   // this.service.login(this.login).subscribe( () =>{       
-   //     this.router.navigate([''])
-   //   })
+    this.service.login(this.login).subscribe( obj =>{
+      this.valid=obj;
+      if(this.valid){ 
+        this.router.navigate(['menu/hospedar'])
+      }
+        
+      })
   }
 
   cancel(): void {
