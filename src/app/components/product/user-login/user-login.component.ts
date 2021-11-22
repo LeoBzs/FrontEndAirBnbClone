@@ -31,7 +31,7 @@ export class UserLoginComponent implements OnInit {
       this.valid=obj;
 
       if(this.valid){ 
-       // this.router.navigate(['menu/hospedar']);
+       // this.router.navigate(['menu/hospedar']); 
         this.service.showMessage("Login Efetuado com Sucesso!")
     }else{
       this.service.showMessage("Emai ou Senha inválido!") //aqui só irá funcionar se trocar no back para status 200 OK por hora
