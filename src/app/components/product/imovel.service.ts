@@ -2,9 +2,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-//import { Imovel } from 'src/app/components/product/cep.model'
 import { imoveisArray, Imovel } from 'src/app/imoveis';
-
+import {MatSnackBar} from '@angular/material/snack-bar'; 
 @Injectable({
   providedIn: 'root'
 })
@@ -19,10 +18,15 @@ export class ImovelService {
 
   imoveisArray: Imovel[] = imoveisArray;
 
-  constructor(private http : HttpClient) { }
+  constructor(private snackBar : MatSnackBar,private http : HttpClient) { }
 
-
-
+  showMessage(msg : string): void{
+    this.snackBar.open(msg, "X",  {
+      duration: 3000,
+      horizontalPosition: "center",
+      verticalPosition: "top"
+  });
+  }
                           
     getAll(): Observable<Imovel[]> {
       return this.http.get<Imovel[]>(this.configUrl);

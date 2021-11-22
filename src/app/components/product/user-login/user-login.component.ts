@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ImovelService } from '../imovel.service';
-
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-user-login',
@@ -14,11 +14,14 @@ export class UserLoginComponent implements OnInit {
     senha: ""
   }
 
+
   valid: boolean 
 
-  constructor(private service : ImovelService, private router : Router) {
+  constructor(private snackBar: MatSnackBar, private service : ImovelService, private router : Router) {
     this.valid = true
    }
+
+
 
   ngOnInit(): void {
   }
@@ -26,10 +29,15 @@ export class UserLoginComponent implements OnInit {
   userLogin(): void {
     this.service.login(this.login).subscribe( obj =>{
       this.valid=obj;
+
       if(this.valid){ 
-        this.router.navigate(['menu/hospedar'])
-      }
-        
+       // this.router.navigate(['menu/hospedar']);
+        this.service.showMessage("Login Efetuado com Sucesso!")
+    }else{
+      this.service.showMessage("Emai ou Senha inválido!") //aqui só irá funcionar se trocar no back para status 200 OK por hora
+
+    }
+
       })
   }
 
