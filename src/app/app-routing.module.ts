@@ -6,6 +6,7 @@ import { CadastroImovelComponent } from './components/product/cadastro-imovel/ca
 import { CadastroLocatarioComponent } from './components/product/cadastro-locatario/cadastro-locatario.component';
 import { VisualizarImoveisComponent } from './components/product/visualizar-imoveis/visualizar-imoveis.component';
 import { HouseSearchComponent } from './components/product/house-search/house-search.component';
+import { UserLoginComponent } from './components/product/user-login/user-login.component';
 
 const routes: Routes = [
 {
@@ -27,6 +28,10 @@ const routes: Routes = [
 {
   path: "menu/imoveis",
   component : VisualizarImoveisComponent
+},
+{
+  path: "menu/entrar",
+  component : UserLoginComponent
 },
 
 ];
