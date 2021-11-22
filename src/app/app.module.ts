@@ -35,6 +35,7 @@ import { CadastroLocatarioComponent } from './components/product/cadastro-locata
 import { CadastroImovelComponent } from './components/product/cadastro-imovel/cadastro-imovel.component';
 import { HouseSearchComponent } from './components/product/house-search/house-search.component';
 import { VisualizarImoveisComponent } from './components/product/visualizar-imoveis/visualizar-imoveis.component';
+import { UserLoginComponent } from './components/product/user-login/user-login.component';
 
 registerLocaleData(localePt);
 
@@ -51,6 +52,7 @@ registerLocaleData(localePt);
     CadastroImovelComponent,
     HouseSearchComponent,
     VisualizarImoveisComponent,
+    UserLoginComponent,
   ],
   imports: [
     BrowserModule,
