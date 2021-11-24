@@ -4,10 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { CadastroImovelComponent } from './components/product/cadastro-imovel/cadastro-imovel.component';
 import { CadastroLocatarioComponent } from './components/product/cadastro-locatario/cadastro-locatario.component';
-import { CepReadComponent } from './components/product/cep-read/cep-read.component';
-import { ImovelReadLogradouroComponent } from './components/product/cep-read-logradouro/cep-read-logradouro.component';
 import { VisualizarImoveisComponent } from './components/product/visualizar-imoveis/visualizar-imoveis.component';
 import { HouseSearchComponent } from './components/product/house-search/house-search.component';
+import { UserLoginComponent } from './components/product/user-login/user-login.component';
 
 const routes: Routes = [
 {
@@ -27,16 +26,12 @@ const routes: Routes = [
   component : CadastroImovelComponent
 },
 {
-  path: "cep/read/:cep",
-  component : CepReadComponent
-},
-{
-  path: "cep/read/logradouro/:cep",
-  component : ImovelReadLogradouroComponent
-},
-{
   path: "menu/imoveis",
   component : VisualizarImoveisComponent
+},
+{
+  path: "menu/entrar",
+  component : UserLoginComponent
 },
 
 ];

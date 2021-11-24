@@ -1,5 +1,6 @@
 
 
+
 export interface Imovel{
     
         id ?: number,
@@ -22,4 +23,5 @@ export interface Imovel{
     
 
 }
+
 

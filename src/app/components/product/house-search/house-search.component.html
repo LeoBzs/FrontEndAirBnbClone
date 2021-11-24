@@ -1,9 +1,31 @@
-<br>
-<div class="imovel" *ngFor="let imovel of imoveis | myfilter: displays" class="imoveisPais">
-<div *ngIf="imovel">
-  
-  <h3>{{ imovel.campo }}</h3>
-  <h3>Preço: {{ imovel.preco }}</h3>
-
+<p><strong class="warningCovid"> * Confira as restrições de viagem relacionadas à COVID-19 antes de fazer uma reserva.</strong></p>
+<mat-divider></mat-divider>
+<div class="imovel" *ngFor="let imovel of imoveis | async" class="imoveisPais">
+<div [ngStyle]="{'background-image': getUrl()}">
+<mat-card class="example-card" *ngIf="imovel.bairro==displays">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header"></div>
+      <mat-card-title> {{imovel.bairro}} </mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://a0.muscache.com/im/pictures/283182b1-33ad-4f50-b8a5-923a1b77b4b3.jpg?im_w=960">
+    <mat-card-content>
+      <p>
+       {{imovel.descricao}}
+      </p>
+    </mat-card-content> 
+    <mat-card-actions>
+      <mat-form-field id="formOne" appearance="fill">
+        <mat-label>Confira a disponibilidade!</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Data início">  
+          <input matEndDate   placeholder="Data término">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+          <button mat-button>Reservar  -  R$ {{imovel.valorDaDiaria}} / dia   -  Contato: {{imovel.telefoneProprietario}}</button>
+    </mat-card-actions>
+  </mat-card>
 </div>
 </div>
