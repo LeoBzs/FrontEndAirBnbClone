@@ -7,6 +7,7 @@ line-height: 1.2;
 .button{
     font-size: 1rem;
     font-weight: 100;
+    padding-right: 10%;
     padding-top: 15px;
     color: #FF385C;
     position: absolute;

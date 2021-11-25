@@ -3,10 +3,10 @@
     <mat-card-subtitle class="subtitle">
 
         <mat-form-field appearance="fill" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-            <mat-label for="campo"> Para onde você vai?</mat-label>         
+            <mat-label for="campo"> Porto Alegre - Digite o bairro</mat-label>         
             <input matInput type="text" id="campo" name="campo" #campo>        
         </mat-form-field>
-        <button mat-button color="primary" class="button"  type="button" (click)="getResult(campo.value)"> <strong>   Conferir</strong></button>
+        <button mat-button color="primary" class="button"  type="button" (click)="getResult(campo.value)"> 	<mat-icon>perm_media</mat-icon> <strong>   Conferir</strong></button>
         </mat-card-subtitle>
 </mat-card>
 </div>
