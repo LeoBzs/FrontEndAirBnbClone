@@ -19,16 +19,16 @@
          </a>
     </button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item  routerLink="/menu/cadastro">
+            <button mat-menu-item  routerLink="/menu/cadastro" >
                 <mat-icon>account_box</mat-icon>
                 <span><strong>Cadastrar-se</strong></span>
               </button>
               <mat-divider></mat-divider>
-          <button mat-menu-item  routerLink="/menu/entrar">
+          <button mat-menu-item  routerLink="/menu/entrar" >
               <mat-icon>account_circle</mat-icon>
               <span>Entrar</span>
             </button>        
-            <button mat-menu-item  routerLink="/menu/hospedar">
+            <button mat-menu-item  routerLink="/menu/entrar" (click)="mensage('Faça Login Para Cadastrar um imoveI')">
               <mat-icon>account_balance</mat-icon>
               <span>Hospedar</span>
             </button>
