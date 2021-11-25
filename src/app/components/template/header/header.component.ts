@@ -1,3 +1,4 @@
+import { ImovelService } from 'src/app/components/product/imovel.service';
 import { HeaderService } from './header.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,11 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private headerService: HeaderService) { }
+  constructor(private headerService: HeaderService, private service :ImovelService) { }
 
   ngOnInit(): void {
   }
+  mensage(mensagem : string){
+    this.service.showMessage(mensagem)
 
+  }
   get tittle(): String{
     return this.headerService.headerData.title
   }
