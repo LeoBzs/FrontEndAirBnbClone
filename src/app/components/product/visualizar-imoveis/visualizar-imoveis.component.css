@@ -6,7 +6,15 @@
     font-size: large;
     color: black;
 }
+
+.titleCard{
+  font-Family: 'Montserrat', sans-serif;
+  font-size: large;
+  font-weight: bold;
+}
+
 .example-card {
+    height:fit-content;
     max-width: 400px;
   }
   

@@ -6,10 +6,10 @@
 
 
       <mat-form-field >
-        <mat-label>Tem ArCondicionado?"</mat-label>
-        <mat-select>
-          <mat-option [(ngModel)]="imovel.arCondicionado"  value="true">Sim</mat-option>
-          <mat-option [(ngModel)]="imovel.arCondicionado" value="false">Não</mat-option>
+        <mat-label>Tem ar-condicionado?</mat-label>
+        <mat-select [(ngModel)]="imovel.arCondicionado">
+          <mat-option [value]="true">Sim</mat-option>
+          <mat-option [value]="false">Não</mat-option>
         </mat-select>
       </mat-form-field>
 

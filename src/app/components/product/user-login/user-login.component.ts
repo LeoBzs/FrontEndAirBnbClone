@@ -30,7 +30,7 @@ export class UserLoginComponent implements OnInit {
         this.router.navigate(['menu/hospedar']);
         this.service.showMessage("Usuário Logado Com Sucesso!") 
     }
-
+    
       })
   }
 
